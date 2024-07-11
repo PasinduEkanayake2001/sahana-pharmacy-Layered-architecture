@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="708.0" prefWidth="1141.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.SupplierFormController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="1258.0" opacity="0.49">
+         <image>
+            <Image url="@../icon/black.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="10.0" prefHeight="701.0" prefWidth="1258.0">
+         <children>
+            <AnchorPane fx:id="SupplierRootNode" layoutY="-12.0" prefHeight="718.0" prefWidth="1258.0" styleClass="bg-color-1">
+               <children>
+                  <AnchorPane layoutX="172.0" layoutY="138.0" prefHeight="225.0" prefWidth="882.0" style="-fx-background-radius: 12;" stylesheets="@../design/dashboard.css">
+                     <children>
+                        <Label layoutX="82.0" layoutY="31.0" text="Supplier Id">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="357.0" layoutY="31.0" text="Supplier Name">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="633.0" layoutY="31.0" text="Company Name">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="367.0" layoutY="126.0" text="Tel">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="128.0" text="Address">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSupplierId" layoutX="90.0" layoutY="68.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="197.0" />
+                        <TextField fx:id="txtAddress" layoutX="90.0" layoutY="160.0" prefHeight="30.0" prefWidth="197.0" />
+                        <TextField fx:id="txtCompanyName" layoutX="643.0" layoutY="68.0" prefHeight="30.0" prefWidth="197.0" />
+                        <TextField fx:id="txtTel" layoutX="362.0" layoutY="163.0" prefHeight="30.0" prefWidth="197.0" />
+                        <TextField fx:id="txtSupplierName" layoutX="362.0" layoutY="68.0" prefHeight="30.0" prefWidth="197.0" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                  </AnchorPane>
+                  <AnchorPane layoutX="172.0" layoutY="382.0" prefHeight="322.0" prefWidth="882.0" style="-fx-background-radius: 12;" stylesheets="@../design/dashboard.css">
+                     <children>
+                        <TableView fx:id="tblSupplier" layoutX="70.0" layoutY="17.0" prefHeight="290.0" prefWidth="540.0">
+                           <columns>
+                              <TableColumn fx:id="colSupplierId" prefWidth="87.99999618530273" text="Supplier Id" />
+                              <TableColumn fx:id="colSupplierName" prefWidth="121.5999755859375" text="Supplier Name" />
+                              <TableColumn fx:id="colCompanyName" prefWidth="144.0" text="Company Name" />
+                              <TableColumn fx:id="colAddress" prefWidth="83.20001220703125" text="Address" />
+                              <TableColumn fx:id="colTel" prefWidth="101.5999755859375" text="Tel" />
+                           </columns>
+                        </TableView>
+                        <JFXButton alignment="BOTTOM_LEFT" layoutX="667.0" layoutY="39.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../icon/icons8-save-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BOTTOM_LEFT" layoutX="667.0" layoutY="220.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #7f8c8d;" text="Clear">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="28.0">
+                                 <image>
+                                    <Image url="@../icon/icons8-clear-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BOTTOM_LEFT" layoutX="667.0" layoutY="97.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #F8943C;" text="Update">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="22.0">
+                                 <image>
+                                    <Image url="@../icon/icons8-update-48.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton alignment="BOTTOM_LEFT" layoutX="667.0" layoutY="160.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #E92E2E;" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../icon/icons8-delete-24.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <Label layoutX="536.0" layoutY="24.0" styleClass="shadow" stylesheets="@../../../../target/classes/design/dashboard.css" text="Supplier Manage">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

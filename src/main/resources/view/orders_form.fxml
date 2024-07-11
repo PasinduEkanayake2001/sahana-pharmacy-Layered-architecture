@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancpane" prefHeight="718.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.OrdersFormController">
+   <children>
+      <ImageView fitHeight="762.0" fitWidth="1264.0" layoutX="-6.0" opacity="0.59">
+         <image>
+            <Image url="@../icon/black.jpeg" />
+         </image>
+      </ImageView>
+
+      <Label layoutX="507.0" layoutY="41.0" styleClass="shadow" stylesheets="@../../../../target/classes/design/dashboard.css" text="Orders Manage">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="94.0" layoutY="156.0" prefHeight="552.0" prefWidth="1072.0" style="-fx-background-radius: 12;" stylesheets="@../design/dashboard.css">
+         <children>
+            <TableView fx:id="tblOrders" layoutX="69.0" layoutY="18.0" prefHeight="474.0" prefWidth="968.0">
+               <columns>
+                  <TableColumn fx:id="colOrdersId" prefWidth="155.19996643066406" text="Orders Id" />
+                  <TableColumn fx:id="colPaymentId" prefWidth="183.199951171875" text="Payment Id" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="180.00006103515625" text="Customer Id" />
+                  <TableColumn fx:id="colDate" prefWidth="180.800048828125" text="Date" />
+                  <TableColumn fx:id="colDate1" prefWidth="135.199951171875" />
+                  <TableColumn fx:id="colDate11" prefWidth="132.0" />
+               </columns>
+            </TableView>
+            <JFXButton alignment="BOTTOM_LEFT" layoutX="907.0" layoutY="507.0" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="129.0" style="-fx-background-color: #526860;" text="Place Order">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+      <TextField layoutX="102.0" layoutY="95.0" prefHeight="26.0" prefWidth="210.0" promptText="search on here" />
+   </children>
+</AnchorPane>

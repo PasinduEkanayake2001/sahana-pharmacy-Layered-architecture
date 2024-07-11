@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.PlaceOrderFormController">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="1258.0" opacity="0.5">
+         <image>
+            <Image url="@../icon/black.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="456.0" layoutY="46.0" styleClass="shadow" stylesheets="@../../../../target/classes/design/placeOrder.css" text="Place Order Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="140.0" text="Order Id :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="212.0" text="Customer Tel :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="95.0" layoutY="293.0" text="Code :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="940.0" layoutY="212.0" text="Customer Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="itemCodeCombo" layoutX="91.0" layoutY="331.0" onAction="#onMedicineCodeSelecting" prefHeight="30.0" prefWidth="133.0" unFocusColor="WHITE" />
+      <Label layoutX="573.0" layoutY="293.0" text="Unit Price :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="754.0" layoutY="293.0" text="Qty On Hand :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="293.0" text="Description :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="951.0" layoutY="293.0" text="Qty :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="buyqtyitem" layoutX="951.0" layoutY="327.0" prefHeight="38.0" prefWidth="74.0" />
+      <JFXButton layoutX="1051.0" layoutY="327.0" onAction="#onaddCartClick" prefHeight="38.0" prefWidth="103.0" style="-fx-background-color: #2D58D6;" text="Add To Cart">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="itemDescriptionlbl" layoutX="322.0" layoutY="331.0" prefHeight="30.0" prefWidth="119.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="itemUnitpricelbl" layoutX="573.0" layoutY="331.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="itemqtyonHand" layoutX="767.0" layoutY="331.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblplaceOrder" layoutX="79.0" layoutY="395.0" prefHeight="279.0" prefWidth="1076.0" stylesheets="@../design/placeOrder.css">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="140.0" text="Code" />
+          <TableColumn fx:id="colDes" prefWidth="229.59996032714844" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="152.0" text="Unit Price" />
+            <TableColumn fx:id="colUnitprice" prefWidth="180.79998779296875" text="Qty" />
+            <TableColumn fx:id="colTotal" prefWidth="181.5999755859375" text="Total" />
+            <TableColumn fx:id="colAction" prefWidth="189.60003662109375" text="Action" />
+            <TableColumn prefWidth="229.59996032714844" text="C2" />
+        </columns>
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <Label fx:id="customerNamelbl" layoutX="1116.0" layoutY="212.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1051.0" layoutY="682.0" onAction="#onPlaceOrderClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #526860;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="88.0" layoutY="680.0" text="Net Total :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="netTtotallbl" layoutX="196.0" layoutY="682.0" prefHeight="30.0" prefWidth="74.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="custTelField" layoutX="237.0" layoutY="212.0" onKeyReleased="#onCustomertelTyping" prefHeight="30.0" prefWidth="150.0" />
+      <Label fx:id="orderIdlbl" layoutX="216.0" layoutY="147.0" text="Label" textFill="WHITE" />
+   </children>
+</AnchorPane>

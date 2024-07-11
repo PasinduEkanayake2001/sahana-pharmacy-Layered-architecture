@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.MedicineFormController">
+   <children>
+      <ImageView fitHeight="718.0" fitWidth="1258.0" opacity="0.49">
+         <image>
+            <Image url="@../icon/black.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="MedicineRootNode" prefHeight="718.0" prefWidth="1258.0" styleClass="bg-color-1" stylesheets="">
+         <children>
+            <AnchorPane layoutX="173.0" layoutY="137.0" prefHeight="225.0" prefWidth="882.0" style="-fx-background-radius: 12;" stylesheets="@../design/dashboard.css">
+               <children>
+                  <Label layoutX="82.0" layoutY="31.0" text="Medicine Id">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="357.0" layoutY="31.0" text="Medicine Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="633.0" layoutY="31.0" text="Medicine Description">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="367.0" layoutY="126.0" text="Price">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="82.0" layoutY="128.0" text="Shelf Id">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMedicineId" layoutX="90.0" layoutY="68.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="197.0" />
+                  <TextField fx:id="txtShelfId" layoutX="90.0" layoutY="160.0" prefHeight="30.0" prefWidth="197.0" />
+                  <TextField fx:id="txtDescription" layoutX="643.0" layoutY="68.0" prefHeight="30.0" prefWidth="197.0" />
+                  <TextField fx:id="txtPrice" layoutX="362.0" layoutY="163.0" prefHeight="30.0" prefWidth="197.0" />
+                  <TextField fx:id="txtMedicineName" layoutX="362.0" layoutY="68.0" prefHeight="30.0" prefWidth="197.0" />
+                  <Label layoutX="633.0" layoutY="126.0" text="Qty On Hand">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtQtyOnHand" layoutX="643.0" layoutY="163.0" prefHeight="30.0" prefWidth="197.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane layoutX="173.0" layoutY="380.0" prefHeight="319.0" prefWidth="882.0" style="-fx-background-radius: 12;" stylesheets="@../design/dashboard.css">
+               <children>
+                  <TableView fx:id="tblMedicine" layoutX="70.0" layoutY="17.0" prefHeight="291.0" prefWidth="647.0">
+                     <columns>
+                        <TableColumn fx:id="colMedicineId" prefWidth="87.99999618530273" text="Medicine Id" />
+                        <TableColumn fx:id="colMedicineName" prefWidth="121.5999755859375" text="Medicine Name" />
+                        <TableColumn fx:id="colMedicineDescription" prefWidth="144.0" text="Medicine Description" />
+                        <TableColumn fx:id="colShelfId" prefWidth="83.20001220703125" text="Shelf Id" />
+                        <TableColumn fx:id="colPrice" prefWidth="101.5999755859375" text="Price" />
+                        <TableColumn fx:id="colQtyOnHand" prefWidth="110.4000244140625" text="Qty On Hand" />
+                     </columns>
+                  </TableView>
+                  <JFXButton alignment="BOTTOM_LEFT" layoutX="733.0" layoutY="36.0" onAction="#btnAddOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Add">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" layoutX="733.0" layoutY="217.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #7f8c8d;" text="Clear">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" layoutX="733.0" layoutY="94.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #F8943C;" text="Update">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BOTTOM_LEFT" layoutX="733.0" layoutY="157.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #E92E2E;" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView layoutX="803.0" layoutY="39.0">
+                     <image>
+                        <Image url="/icon/icons8-add-24.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="803.0" layoutY="97.0">
+                     <image>
+                        <Image url="/icon/icons8-update-48.png" />
+                     </image>
+                  </ImageView>
+
+
+               </children>
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+            <Label layoutX="484.0" layoutY="23.0" styleClass="shadow" stylesheets="@../../../../target/classes/design/dashboard.css" text="Medicine Manage">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane fx:id="CustomerRootNode" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.CustomerFormController">
+    <VBox spacing="10" alignment="CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <Label text="Customer Management" style="-fx-font-size: 20px;"/>
+        <HBox spacing="10">
+            <Label text="Customer ID:"/>
+            <TextField fx:id="txtCustomerId" promptText="Enter Customer ID"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Name:"/>
+            <TextField fx:id="txtCustomerName" promptText="Enter Customer Name"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Address:"/>
+            <TextField fx:id="txtCustomerAddress" promptText="Enter Customer Address"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Telephone:"/>
+            <TextField fx:id="txtCustomerTel" promptText="Enter Customer Tel"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="User ID:"/>
+            <TextField fx:id="txtUserId" promptText="Enter User ID"/>
+        </HBox>
+        <HBox spacing="10">
+            <Button text="Save" onAction="#btnSaveOnAction"/>
+            <Button text="Update" onAction="#btnUpdateOnAction"/>
+            <Button text="Delete" onAction="#btnDeleteOnAction"/>
+            <Button text="Clear" onAction="#btnClearOnAction"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Search by ID:"/>
+            <TextField fx:id="txtCustomerId" promptText="Enter Customer ID"/>
+            <Button text="Search" onAction="#txtSearchOnAction"/>
+        </HBox>
+        <TableView fx:id="tblCustomer">
+            <columns>
+                <TableColumn fx:id="colCustomerId" text="Customer ID"/>
+                <TableColumn fx:id="colCustomerName" text="Name"/>
+                <TableColumn fx:id="colCustomerAddress" text="Address"/>
+                <TableColumn fx:id="colCustomerTel" text="Telephone"/>
+                <TableColumn fx:id="colUserId" text="User ID"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

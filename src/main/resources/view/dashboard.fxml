@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="718.0" prefWidth="1258.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.dashboardcontrol">
+   <children>
+      <ImageView fitHeight="747.0" fitWidth="1258.0" layoutY="-4.0">
+         <image>
+            <Image url="@../icon/medicine-capsules-global-health-with-geometric-pattern-digital-remix.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="42.0" text="Branch  ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="47.0" layoutY="72.0" stylesheets="@../css/texfelds.css" text="Anuradhapura" />
+      <Label layoutX="231.0" layoutY="42.0" prefHeight="30.0" prefWidth="77.0" text="location">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField layoutX="231.0" layoutY="72.0" stylesheets="@../css/texfelds.css" text="Anuradhapura Town" />
+      <ImageView fitHeight="494.0" fitWidth="671.0" layoutX="14.0" layoutY="245.0">
+         <image>
+            <Image url="@../icon/images.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="213.0" fitWidth="209.0" layoutX="35.0" layoutY="260.0">
+         <image>
+            <Image url="@../icon/barchat.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="213.0" fitWidth="209.0" layoutX="460.0" layoutY="260.0">
+         <image>
+            <Image url="@../icon/barchat.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="395.0" layoutY="42.0" prefHeight="30.0" prefWidth="111.0" text="Hello User">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblusername" layoutX="548.0" layoutY="36.0" prefHeight="30.0" prefWidth="140.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblOrders" layoutX="720.0" layoutY="66.0" prefHeight="637.0" prefWidth="511.0">
+         <columns>
+            <TableColumn fx:id="colOrdersId" prefWidth="97.60003662109375" text="Orders Id" />
+            <TableColumn fx:id="colPaymentId" prefWidth="127.20001220703125" text="Payment Id" />
+            <TableColumn fx:id="colCustomerId" prefWidth="96.79998779296875" text="Customer Id" />
+            <TableColumn fx:id="colDate" prefWidth="189.5999755859375" text="Date" />
+            <TableColumn fx:id="colDate1" prefWidth="325.60009765625" />
+            <TableColumn fx:id="colDate11" prefWidth="132.0" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

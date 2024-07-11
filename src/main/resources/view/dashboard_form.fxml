@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pharmacy.controller.DashboardFormController">
+   <children>
+      <AnchorPane prefHeight="790.0" prefWidth="303.0" styleClass="bg-color-1" stylesheets="@../design/dashboard.css">
+         <children>
+            <ImageView fitHeight="790.0" fitWidth="303.0" opacity="0.75">
+               <image>
+                  <Image url="/icon/iStock-479304376 - Copy.jpg" />
+               </image>
+            </ImageView>
+            <Line endX="179.20001220703125" layoutX="104.0" layoutY="179.0" startX="-91.19999694824219" stroke="WHITE" />
+            <Label layoutX="9.0" layoutY="190.0" text="Feature" />
+            <JFXButton layoutX="22.0" layoutY="265.0" onAction="#btnMdOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-border-color: #ffffff; -fx-background-color: #afeeee; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Medicine" />
+            <JFXButton layoutX="22.0" layoutY="318.0" onAction="#btnCustomerOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-border-color: #ffffff; -fx-background-color: #afeeee; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Customers" />
+            <JFXButton layoutX="22.0" layoutY="374.0" onAction="#btnSupplierOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-border-color: #ffffff; -fx-background-color: #afeeee; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Supplier" />
+            <JFXButton layoutX="22.0" layoutY="431.0" onAction="#btnOrdersOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-border-color: #ffffff; -fx-background-color: #afeeee; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Orders" />
+            <JFXButton layoutX="22.0" layoutY="487.0" onAction="#btnPaymentOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-border-color: #ffffff; -fx-background-color: #afeeee; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Payment" />
+            <JFXButton layoutX="18.0" layoutY="736.0" onAction="#btnLogOutOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-border-color: #ffffff; -fx-background-color: #afeeee; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Logout" />
+            <JFXButton buttonType="RAISED" layoutX="22.0" layoutY="214.0" onAction="#btnDashboardOnAction" prefHeight="40.0" prefWidth="267.0" style="-fx-background-color: #afeeee; -fx-border-color: #ffffff; -fx-text-fill: black; -fx-font-weight: bold;" styleClass="btn-1" stylesheets="@../design/dashboard.css" text="Dashboard" />
+
+            <Label layoutX="8.0" layoutY="14.0" prefHeight="74.0" prefWidth="295.0" text="Pharmacy Management System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="74.0" fitWidth="1520.0" layoutX="-1.0" layoutY="-3.0">
+         <image>
+            <Image url="@../icon/bariStock-479304376.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="mainRootNode" layoutX="303.0" layoutY="72.0" prefHeight="718.0" prefWidth="1216.0">
+         <children>
+            <TextField layoutX="23.0" layoutY="54.0" stylesheets="@../css/texfelds.css" text="Anuradhapura" />
+            <TextField layoutX="238.0" layoutY="54.0" stylesheets="@../css/texfelds.css" text="Anuradhapura Town" />
+            <Label layoutX="23.0" layoutY="14.0" text="Branch  ">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="238.0" layoutY="14.0" prefHeight="30.0" prefWidth="77.0" text="location">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="370.0" layoutY="18.0" prefHeight="30.0" prefWidth="111.0" text="Hello User">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="494.0" fitWidth="671.0" layoutX="23.0" layoutY="224.0">
+               <image>
+                  <Image url="@../icon/images.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="213.0" fitWidth="209.0" layoutX="471.0" layoutY="239.0">
+               <image>
+                  <Image url="@../icon/barchat.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="213.0" fitWidth="209.0" layoutX="37.0" layoutY="239.0">
+               <image>
+                  <Image url="@../icon/barchat.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <TextField layoutX="1302.0" layoutY="21.0" prefHeight="27.0" prefWidth="212.0" stylesheets="@../css/texfelds.css" />
+      <Label fx:id="date_time" alignment="CENTER_RIGHT" layoutX="1302.0" layoutY="21.0" prefHeight="28.0" prefWidth="204.0" text="MM:DD:YY" />
+      <TextField layoutX="760.0" layoutY="3.0" opacity="0.18" prefHeight="62.0" prefWidth="474.0" />
+      <Label layoutX="789.0" layoutY="-2.0" prefHeight="74.0" prefWidth="437.0" text="SAHANA PHARMACY">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblusername" layoutX="558.0" layoutY="46.0" prefHeight="30.0" prefWidth="140.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
